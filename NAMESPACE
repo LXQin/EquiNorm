@@ -1,0 +1,2 @@
+UseDynLib( EquiNorm )
+export( equi.gene.norm )
