@@ -1,2 +1,3 @@
-UseDynLib( EquiNorm )
+importFrom( lme4, lmer, fixef, VarCorr, logLik )
+importFrom( mvtnorm, dmvnorm )
 export( equi.gene.norm )

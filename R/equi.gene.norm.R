@@ -6,7 +6,7 @@ function(data.y, data.x, pi.start=0.1, lambda.start=0.9){
 	est.hat.new <- equi.gene.norm.EM(data.y, data.x, theta.hat)
 
 	# Save output to external file
-	save( est.hat.new, file = "est.hat.Rdata" )
+	save( est.hat.new, file = "est.hat.RData" )
 	return( est.hat.new )
 }
 
