@@ -1,3 +1,4 @@
-importFrom( lme4, lmer, fixef, VarCorr, logLik )
+importFrom( lme4, lmer, fixef, VarCorr )
 importFrom( mvtnorm, dmvnorm )
+importFrom( lemma, lemma )
 export( equi.gene.norm )

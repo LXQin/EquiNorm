@@ -1,7 +1,7 @@
 \name{est.hat}
 \alias{est.hat}
 \docType{data}
-\title{est.hat}
+\title{List containing the estimates from the hierarchical mixture model.}
 
 \description{List containing the estimates from the hierarchical mixture model.}
 

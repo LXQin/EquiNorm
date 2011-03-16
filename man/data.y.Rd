@@ -1,10 +1,9 @@
 \name{data.y}
 \alias{data.y}
 \docType{data}
-\title{data.y}
+\title{An array of gene expression data.}
 \description{
-A 3-dimensional array containing probe-level gene expression data.  The array data.y contains values for 
-\emph{S} probesets, \emph{n} samples, and \emph{P} probes.
+A 3-dimensional array containing probe-level gene expression data.  The array data.y contains values for \emph{S} probesets, \emph{n} samples, and \emph{P} probes.
 }
 
 \format{
