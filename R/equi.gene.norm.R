@@ -1,7 +1,7 @@
 equi.gene.norm <-
 function (data.y, data.x, pi.start = 0.1, lambda.start = 0.9, 
-    tolerance = 0.001, maxIter = 10, lemma.outdir = "OUT", lemma.tol = 1e-06, 
-    lemma.maxIts = 50000, lemma.plots = FALSE) 
+    tolerance = 0.001, maxIter = 10, lemma.outdir = tempdir(), 
+    lemma.tol = 1e-06, lemma.maxIts = 50000, lemma.plots = FALSE) 
 {
     S <<- dim(data.y)[[1]]
     n <<- dim(data.y)[[2]]

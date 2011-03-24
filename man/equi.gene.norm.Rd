@@ -8,7 +8,7 @@
 \usage{
 equi.gene.norm( data.y, data.x,
                 pi.start = 0.1, lambda.start = 0.9, tolerance = 1E-3, maxIter = 10,
-				lemma.outdir = "OUT", lemma.tol = 1E-6, lemma.maxIts = 50000, lemma.plots = FALSE )
+				lemma.outdir = tempdir(), lemma.tol = 1E-6, lemma.maxIts = 50000, lemma.plots = FALSE )
 }
 
 \arguments{
@@ -25,7 +25,7 @@ equi.gene.norm( data.y, data.x,
   
   \item{maxIter}{(Optional)The maximum number of iterations for equi.gene.norm(). The default value is 10.}
   
-  \item{lemma.outdir}{(Optional) The function equi.gene.norm() implements an EM algorithm to estimate array effects and classify genes as non-differentially expressed, under-expressed, or over-expressed.  The M-step of this EM algorithm calls the lemma() function in the lemma library to estimate an auxiliary EM algorithm, which actually does the gene classification.  The following parameters are passed to lemma(). For further information see the documentation for the lemma package. lemma.outdir specifies the output directory in which results from lemma() estimation are stored. The specified directory is a subdirectory of the current working directory. The default value is "OUT". This will create a folder called OUT in the current working directory.}
+  \item{lemma.outdir}{(Optional) The function equi.gene.norm() implements an EM algorithm to estimate array effects and classify genes as non-differentially expressed, under-expressed, or over-expressed.  The M-step of this EM algorithm calls the lemma() function in the lemma library to estimate an auxiliary EM algorithm, which actually does the gene classification.  The following parameters are passed to lemma(). For further information see the documentation for the lemma package. lemma.outdir specifies the output directory in which results from lemma() estimation are stored. The default value is tempdir(). This will place intermdiate files in the R temporary folder.}
   
   \item{lemma.tol}{(Optional)This is the tolerance parameter for lemma() and it determines how many iterations of the EM algorithm must be performed.  The default value is 1E-6.}
   
@@ -77,7 +77,7 @@ data(data.simulated)
 
 est.hat.lemma <- equi.gene.norm( data.simulated$data.y, data.simulated$data.x,
                  pi.start = 0.1, lambda.start = 0.9, tolerance = 1E-3, maxIter = 10,
-				 lemma.outdir = "OUT", lemma.tol = 1E-6, lemma.maxIts = 50000, lemma.plots = FALSE )
+				 lemma.outdir = tempdir(), lemma.tol = 1E-6, lemma.maxIts = 50000, lemma.plots = FALSE )
 
 ###########################################################################
 # Print results from estimation and compare with true values.             #

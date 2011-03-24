@@ -33,9 +33,7 @@ function (data.y, data.x, e.hat, theta.hat, lemma.outdir, lemma.tol,
     lemma(data.y.lemma, saveascsv = TRUE, plots = lemma.plots, 
         tol = lemma.tol, maxIts = lemma.maxIts, outdir = lemma.outdir)
     working.directory <- getwd()
-    lemma.outpath <- paste(working.directory, "/", lemma.outdir, 
-        sep = "")
-    setwd(lemma.outpath)
+    setwd(lemma.outdir)
     load("AllData.RData")
     setwd(working.directory)
     u.hat <- NULL

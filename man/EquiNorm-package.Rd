@@ -11,8 +11,8 @@
 \tabular{ll}{
 Package: \tab EquiNorm\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2011-02-08\cr
+Version: \tab 2.0\cr
+Date: \tab 2011-24-03\cr
 License: \tab LGPL >= 2.0\cr
 LazyLoad: \tab yes\cr
 }
@@ -52,7 +52,7 @@ data(data.simulated)
 
 est.hat.lemma <- equi.gene.norm( data.simulated$data.y, data.simulated$data.x,
 				 pi.start = 0.1, lambda.start = 0.9, tolerance = 1E-3, maxIter = 10,
-				 lemma.outdir = "OUT", lemma.tol = 1E-6, lemma.maxIts = 50000, lemma.plots = FALSE )
+				 lemma.outdir = tempdir(), lemma.tol = 1E-6, lemma.maxIts = 50000, lemma.plots = FALSE )
 
 ###########################################################################
 # Print results from estimation and compare with true values.             #
